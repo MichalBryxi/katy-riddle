@@ -8,7 +8,10 @@ export default Ember.Component.extend({
   },
 
   isSelected: Ember.computed('selected.id', function () {
-    console.log('a');
     return this.get('tile.id') === this.get('selected.id');
+  }),
+
+  isDeleted: Ember.computed('deleted.[]', function () {
+    return this.get('deleted').contains(this.get('tile.random'));
   }),
 });

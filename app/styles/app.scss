@@ -16,5 +16,6 @@ $color-light-green: map-merge($color-light-green, ('contrast':  $light-contrast-
 // Import or define the rest of your application's styles.
 
 .selected md-grid-tile {
-  background-color: #6688dd;
+  background-color: #088;
+  box-shadow: 5px 5px 10px #888;
 }
