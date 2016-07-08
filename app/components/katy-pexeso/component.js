@@ -3,7 +3,7 @@ import _collection from 'lodash/collection';
 
 export default Ember.Component.extend({
   tagName: '',
-  count: 4,
+  count: 10,
   selected: null,
   deleted: [],
 
@@ -28,6 +28,10 @@ export default Ember.Component.extend({
     }
 
     return tiles;
+  }),
+
+  isFinished: Ember.computed('progress', function () {
+    return this.get('progress') === 100;
   }),
 
   progress: Ember.computed('count', 'deleted.[]', function () {
