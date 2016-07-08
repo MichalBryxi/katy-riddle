@@ -1,9 +1,7 @@
 {{#paper-content class="md-whiteframe-z1 grid-list-demo-responsiveTiles" layout-padding=''}}
-   {{#paper-grid-list md-cols-xs=1 md-cols-sm=2 md-cols-md=4 md-cols-lg=6 md-cols-xl=10 md-row-height="1:1"}}
-     {{#each tilesShuffled as |tile|}}
-       {{#paper-grid-tile colspan=1 rowspan=1 class="red"}}
-          <img src="https://api.adorable.io/avatars/200/{{tile.id}}.png" />
-       {{/paper-grid-tile}}
-     {{/each}}
-   {{/paper-grid-list}}
- {{/paper-content}}
+  {{#paper-grid-list md-cols-xs=1 md-cols-sm=2 md-cols-md=4 md-cols-lg=6 md-cols-xl=10 md-row-height="1:1"}}
+    {{#each tilesShuffled as |tile|}}
+      {{katy-tile tile=tile selected=selected clicked=(action "tileClicked")}}
+    {{/each}}
+  {{/paper-grid-list}}
+{{/paper-content}}

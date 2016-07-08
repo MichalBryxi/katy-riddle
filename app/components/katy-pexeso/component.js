@@ -1,29 +1,25 @@
 import Ember from 'ember';
+import _collection from 'lodash/collection';
 
 export default Ember.Component.extend({
-  width: 3,
-  height: 3,
-  base: 150,
+  count: 3,
+  selected: null,
 
-  seed: Ember.computed(function () {
-    return Math.floor(Math.random() * 100);
-  }),
-
-  tiles: Ember.computed('width', 'height', 'seed', function () {
-    let width = this.get('width');
-    let height = this.get('height');
-    let base = this.get('base');
-    let id;
+  tiles: Ember.computed('count', 'seed', function () {
+    let count = this.get('count');
+    let id = 0;
+    let random;
     let tiles = [];
 
-    for (let i = 0; i < width; i++) {
-      for (let j = 0; j < height; j++) {
-        let id =  Math.floor(Math.random() * 9999) + 1;
+    for (let i = 0; i < count; i++) {
+      let random =  Math.floor(Math.random() * 9999) + 1;
+
+      for (let k = 0; k < 2; k++) {
         let tile = {
-          id: id,
+          random: random,
+          id: id++,
         };
 
-        tiles.push(tile);
         tiles.push(tile);
       }
     }
@@ -32,16 +28,12 @@ export default Ember.Component.extend({
   }),
 
   tilesShuffled: Ember.computed('tiles.[]', function () {
-    let tiles = this.get('tiles');
-    let j = this.get('width') * this.get('height');
-
-    while (j > 0) {
-      let i = Math.floor(Math.random() * j--);
-      let temp = tiles[i];
-      tiles[i] = tiles[j];
-      tiles[j] = temp;
-    }
-
-    return tiles;
+    return _collection.shuffle(this.get('tiles'));
   }),
+
+  actions: {
+    tileClicked(tile) {
+      this.set('selected', tile);
+    },
+  },
 });

@@ -37,6 +37,7 @@
     "ember-data": "^2.6.0",
     "ember-export-application-global": "^1.0.5",
     "ember-load-initializers": "^0.5.1",
+    "ember-lodash": "0.0.10",
     "ember-paper": "git://github.com/miguelcobain/ember-paper.git#4d3b4930a0422d88205a9971c2fe6b3d8f47a967",
     "ember-resolver": "^2.0.3",
     "loader.js": "^4.0.1"
