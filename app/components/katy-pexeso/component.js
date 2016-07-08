@@ -2,6 +2,7 @@ import Ember from 'ember';
 import _collection from 'lodash/collection';
 
 export default Ember.Component.extend({
+  tagName: '',
   count: 4,
   selected: null,
   deleted: [],
