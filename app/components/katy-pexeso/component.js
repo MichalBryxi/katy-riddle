@@ -3,7 +3,7 @@ import _collection from 'lodash/collection';
 
 export default Ember.Component.extend({
   tagName: '',
-  count: 10,
+  count: 16,
   selected: null,
   deleted: [],
 
@@ -14,7 +14,7 @@ export default Ember.Component.extend({
     let tiles = [];
 
     for (let i = 0; i < count; i++) {
-      let random =  Math.floor(Math.random() * 9999) + 1;
+      let random =  Math.floor(Math.random() * 99999) + 1;
 
       for (let k = 0; k < 2; k++) {
         let tile = {

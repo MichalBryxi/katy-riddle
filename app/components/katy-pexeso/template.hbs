@@ -1,20 +1,23 @@
-{{#paper-toolbar tall=true}}
+{{#paper-toolbar}}
   {{#paper-toolbar-tools}}
     <h1 class="flex-40">Katy's "tap the pairs"</h1>
-    {{paper-progress-linear accent=true value=progress}}
-    <span>&nbsp;&nbsp;&nbsp;{{progress}}%</span>
+    <div class="flex"></div>
+    <span>{{progress}}%</span>
   {{/paper-toolbar-tools}}
 {{/paper-toolbar}}
 
+{{paper-progress-linear accent=true value=progress}}
+
 {{#if isFinished}}
-    <div class="layout-row layout-align-center-center">
+    <div class="layout-column layout-align-center-center">
+      <h1>Congratulations!</h1>
       {{#paper-card as |card|}}
         {{card.image src="/assets/images/qr_code.jpg" alt="QR Code" title="QR Code"}}
       {{/paper-card}}
     </div>
 {{else}}
   {{#paper-content}}
-    {{#paper-grid-list md-cols-xs=1 md-cols-sm=2 md-cols-md=4 md-cols-lg=6 md-cols-xl=10 md-row-height="1:1"}}
+    {{#paper-grid-list md-cols-xs=2 md-cols-sm=4 md-cols-md=8 md-cols-lg=12 md-cols-xl=20 md-row-height="1:1"}}
       {{#each tilesShuffled as |tile|}}
         {{katy-tile tile=tile deleted=deleted selected=selected clicked=(action "tileClicked")}}
       {{/each}}
