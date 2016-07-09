@@ -10,7 +10,6 @@ export default Ember.Component.extend({
   tiles: Ember.computed('count', function () {
     let count = this.get('count');
     let id = 0;
-    let random;
     let tiles = [];
 
     for (let i = 0; i < count; i++) {
