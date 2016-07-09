@@ -4,7 +4,7 @@ Simple ember-cli v2.6.1 "tap the pairs game". Once you tap couple of matching fa
 
 This application was made as birthday present to my friend. It's simple puzzle game developed in ~5 hours. Nice demo of EmberJS possibilities.
 
-* [Demo application](https://katy.pudr.com/)
+* [Demo application](http://katy.pudr.com/)
 
 ![Screenshot](/doc/screenshot.png "Screenshot")
 
