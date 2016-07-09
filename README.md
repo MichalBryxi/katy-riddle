@@ -1,7 +1,12 @@
 # Katy-riddle
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+Simple ember-cli v2.6.1 "tap the pairs game". Once you tap couple of matching faces, they will disappear. When you clean the whole area, you will get final content.
+
+This application was made as birthday present to my friend. It's simple puzzle game developed in ~5 hours. Nice demo of EmberJS possibilities.
+
+* [Demo application](https://katy.pudr.com/)
+
+![Screenshot](/doc/screenshot.png "Screenshot")
 
 ## Prerequisites
 
@@ -50,4 +55,3 @@ Specify what it takes to deploy your app.
 * Development Browser Extensions
   * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
   * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
-
